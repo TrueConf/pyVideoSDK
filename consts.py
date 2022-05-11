@@ -1,0 +1,23 @@
+﻿CAUSE = {
+    0: "Your call has been rejected",
+    1: "Maximum number of conference participants is reached",
+    2: "Participant is busy",
+    3: "User is not available now",
+    4: "Invalid conference",
+    5: "User not found",
+    6: "JOIN_OK",
+    7: "Insufficient funds",
+    8: "Access denied",
+    9: "Rejected by logout",
+    10: "The action cannot be completed",
+    11: "Rejected by local resource limit",
+    12: "Enter conference password",
+    13: "Wrong password",
+    14: "The user has rejected your call",
+    15: "Rejected by bad rating",
+    16: "The user does not answer",
+    17: "Conference is not active yet",
+    18: "Conference is over",
+    19: "Conference not found",
+    20: "Conference type is not supported"
+}
