@@ -17,6 +17,10 @@ from logging import Formatter
 from enum import Enum, IntEnum
 import pyVideoSDK.utils
 
+__status__  = "Development"
+__version__ = "0.0.0.1"
+__date__    = "12 May 2022"
+
 # PORTS: c:\ProgramData\TrueConf\VideoSDK\web\default\config.json
 # CONFIG_JSON_FILE = "c:\ProgramData\TrueConf\VideoSDK\web\default\config.json"
 

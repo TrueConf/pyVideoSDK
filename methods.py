@@ -84,3 +84,34 @@ class Methods:
         state = 1 if not maximized else 2
         command = {"method": "changeWindowState", "windowState": state, "stayOnTop": stayOnTop}
         self.videosdk.command(command)
+
+    def reject(self):
+        '''
+        The command allows to reject incoming call or invitation to the conference
+        '''
+        command = {"method": "reject"}
+        self.videosdk.command(command)
+
+    def rejectPeer(self, peerId: str):
+        '''
+        Reject user’s request to join your conference
+
+        Parameters:
+
+            peerId: str 
+                unique user ID
+        '''
+        command = {"method": "rejectPeer", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def acceptPeer(self, peerId: str):
+        '''
+        Accept a request from the user to participate in your conference
+
+        Parameters:
+
+            peerId: str 
+                unique user ID
+        '''
+        command = {"method": "acceptPeer", "peerId": peerId}
+        self.videosdk.command(command)

@@ -21,3 +21,20 @@
     19: "Conference not found",
     20: "Conference type is not supported"
 }
+
+EV_appStateChanged = "appStateChanged"
+EV_incomingChatMessage = "incomingChatMessage"
+EV_inviteReceived = "inviteReceived"
+
+EVENT = {
+    "ALL": {},
+    EV_appStateChanged: {"event": "appStateChanged", "appState": None},
+    EV_incomingChatMessage: {"event": "incomingChatMessage", "peerId": None, "peerDn": None, "message": None, "time": None, "method": "event"},
+    EV_inviteReceived: {"event": "inviteReceived", "peerId": None, "peerDn": None, "type": None, "confId": None, "method": "event"}   
+}
+
+M_getAppState = "getAppState"
+
+METHOD = {
+    "getAppState": {"method": "getAppState", "appState": None},
+}
