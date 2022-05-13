@@ -25,12 +25,15 @@
 EV_appStateChanged = "appStateChanged"
 EV_incomingChatMessage = "incomingChatMessage"
 EV_inviteReceived = "inviteReceived"
+EV_rejectReceived = "rejectReceived"
 
 EVENT = {
     "ALL": {},
     EV_appStateChanged: {"event": "appStateChanged", "appState": None},
     EV_incomingChatMessage: {"event": "incomingChatMessage", "peerId": None, "peerDn": None, "message": None, "time": None, "method": "event"},
-    EV_inviteReceived: {"event": "inviteReceived", "peerId": None, "peerDn": None, "type": None, "confId": None, "method": "event"}   
+    EV_inviteReceived: {"event": "inviteReceived", "peerId": None, "peerDn": None, "type": None, "confId": None, "method": "event"},
+    EV_rejectReceived: {"event": "rejectReceived", "cause": None, "peerId": None, "peerDn": None, "method": "event"}
+
 }
 
 M_getAppState = "getAppState"

@@ -229,7 +229,7 @@ class VideoSDK:
         try:
             self.__process_message(message)
         except Exception as e:
-            logger.error(f'Message processing error: {e}')
+            logger.error(f'Socket data processing error. {e.__class__}: {str(e)}')
 
     def __WS_error(self, ws, error):
         logger.error(f'WebSocket connection error: {error}')

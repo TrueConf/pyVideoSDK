@@ -114,4 +114,4 @@ class Methods:
                 unique user ID
         '''
         command = {"method": "acceptPeer", "peerId": peerId}
-        self.videosdk.command(command)
+        self.videosdk.command(command)    
