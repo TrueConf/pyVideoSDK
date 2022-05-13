@@ -414,5 +414,22 @@ M_turnRemoteSpeaker = "turnRemoteSpeaker"
 M_unblock = "unblock"
 
 METHOD = {
-    "getAppState": {"method": "getAppState", "appState": None},
+    M_getAppState: {"method": "getAppState", "appState": None},
+    M_getHardware: {
+      "method": "getHardware",
+      "audioCapturers": None,
+      "currentAudioCapturerName": None,
+      "currentAudioCapturerDescription": None,
+      #"currentAudioCapturerType": None, # version 4.1 or later
+      "audioRenderers": None,
+      "currentAudioRendererName": None,
+      "currentAudioRendererDescription": None,
+      #"currentAudioRendererType": None, # version 4.1 or later
+      "videoCapturers": None,
+      "currentVideoCapturerName": None,
+      "currentVideoCapturerDescription": None,
+      "currentVideoCapturerType": None,
+      "DSCaptureList": None,
+      "result": None
+    },
 }

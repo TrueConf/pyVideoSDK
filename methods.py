@@ -133,7 +133,7 @@ class Methods:
                         "symmetric" - symmetric
 
                         "asymmetric" - assymetric
-                        
+
                         "role" - role-based
 
             autoAccept: bool
@@ -148,5 +148,13 @@ class Methods:
             command = {"method": "createConference", "title": title, "confType": confType, "autoAccept": autoAccept}
 
         self.videosdk.command(command)
+
+    def getHardware(self):
+        '''
+        Requesting the list of hardware.
+        '''
+        command = {"method" : "getHardware"}
+        self.videosdk.command(command)
+
     
 
