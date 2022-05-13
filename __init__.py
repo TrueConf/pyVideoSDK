@@ -262,7 +262,7 @@ class VideoSDK:
 
     def __set_session_status(self, status):
         self.session_status = status
-        logger.info(f'Set connection status: {self.session_status.name}')
+        logger.info(f'Session status: {self.session_status.name}')
 
     def __auth(self, pin: str):
         if pin:
