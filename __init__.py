@@ -63,7 +63,6 @@ APPLICATION_STATE = {
     6: {"name": "close",      "hint": f'{PRODUCT_NAME} is finishing the conference'}
 }
 
-
 class CustomSDKException(Exception):
     def __init__(self, message):
         super().__init__(message)

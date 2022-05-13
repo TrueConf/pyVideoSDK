@@ -1,4 +1,9 @@
-﻿CAUSE = {
+﻿#Conference types
+CONFTYPE_symmetric  = "symmetric"
+CONFTYPE_asymmetric = "assymetric"                        
+CONFTYPE_role       = "role"
+
+CAUSE = {
     0: "Your call has been rejected",
     1: "Maximum number of conference participants is reached",
     2: "Participant is busy",

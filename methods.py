@@ -114,4 +114,39 @@ class Methods:
                 unique user ID
         '''
         command = {"method": "acceptPeer", "peerId": peerId}
-        self.videosdk.command(command)    
+        self.videosdk.command(command)
+
+    def createConference(self, title: str, confType: str, autoAccept: bool, inviteList: list = None):
+        '''
+        Create a conference with specified parameters and participants
+
+        Parameters:
+
+            title: str
+                Title
+
+            confType: str
+                Conference type.
+
+                Must be follow values:
+
+                        "symmetric" - symmetric
+
+                        "asymmetric" - assymetric
+                        
+                        "role" - role-based
+
+            autoAccept: bool
+                An indicator which gives permission to automatically accept participants into the conference
+
+            inviteList: list
+                List of strings with unique user identifiers (TrueConf ID) to whom an invitation to the conference will be sent
+        '''
+        if inviteList:
+            command = {"method": "createConference", "title": title, "confType": confType, "autoAccept": autoAccept,  "inviteList": inviteList}
+        else:
+            command = {"method": "createConference", "title": title, "confType": confType, "autoAccept": autoAccept}
+
+        self.videosdk.command(command)
+    
+
