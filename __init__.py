@@ -252,11 +252,6 @@ class VideoSDK:
         #thread.start_new_thread(run, ())
     # =======================================
 
-    def close_session(self):
-        """Disconnect from the VideoSDK application"""
-        logger.info('Connection is closing...')
-        self.__set_session_status(SessionStatus.close)
-
     def __run_socket(self):
         self.websocket.run_forever()
 
@@ -406,6 +401,11 @@ class VideoSDK:
         #self.connection.on_open = self.on_open
         self.__set_session_status(SessionStatus.started)
         thread.start_new_thread(self.__run_socket, ())
+
+    def close_session(self):
+        """Disconnect from the VideoSDK application"""
+        logger.info('Connection is closing...')
+        self.__set_session_status(SessionStatus.close)
 
     def getAppState(self) -> int:
         ''' 
