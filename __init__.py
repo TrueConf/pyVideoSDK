@@ -18,7 +18,11 @@ from enum import Enum, IntEnum
 import pyVideoSDK.utils
 
 __status__  = "Development"
-__version__ = "0.0.0.1"
+__author__ = "Andrey Zobov"
+__contact__ = "azobov@trueconf.com"
+__deprecated__ = False
+__email__ =  "azobov@trueconf.com"
+__version__ = "0.1"
 __date__    = "12 May 2022"
 
 # PORTS: c:\ProgramData\TrueConf\VideoSDK\web\default\config.json
