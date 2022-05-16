@@ -18,7 +18,7 @@ from enum import Enum, IntEnum
 import pyVideoSDK.utils
 
 __status__  = "Development"
-__author__ = "Andrey Zobov"
+__authors__ = ["Andrey Zobov", "Pavel Titov"]
 __contact__ = "azobov@trueconf.com"
 __deprecated__ = False
 __email__ =  "azobov@trueconf.com"
