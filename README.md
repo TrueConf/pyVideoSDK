@@ -3,7 +3,7 @@ A Python library for the TrueConf VideoSDK API &amp; TrueConf Room API
 
 ## How to install TrueConf Room
 
-* [Download TrueConf Room](https://github.com/zoboff/tcroom/blob/master/install_trueconf_room.md)
+* [Download TrueConf Room](download.md)
 
 ## Before: Launch the *TrueConf Room* application with *-pin* parameter.
 
