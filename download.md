@@ -1,45 +1,43 @@
 # Download & Install
 
-## Download TrueConf Room ver. 4.0 for free
+## Download TrueConf Room for free
 
-### Microsoft Windows
+### Microsoft Windows ver. 7 SP1 or newer
 
-(Microsoft Windows ver. 7 SP1 or newer)
+https://trueconf.com/download/room/trueconf_room_setup.exe
 
-https://trueconf.com/download/sdk/room_setup_4.0.0.1224.exe
+### Debian 10
 
-### ubuntu-20.04
+https://trueconf.com/download/room/linux/trueconf_room_debian10_amd64.deb
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~ubt20.04_amd64.deb
+### Debian 11
 
-### ubuntu-21.10
+https://trueconf.com/download/room/linux/trueconf_room_debian11_amd64.deb
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~ubt21.10_amd64.deb
+### Ubuntu 20.04
 
-### ubuntu-arm64 21.10 (optimized for Raspberry Pi 4)
+https://trueconf.com/download/room/linux/trueconf_room_ubuntu2004_amd64.deb
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1404-1~ubt21.10_arm64.deb
+### Ubuntu 21.10
 
-### debian-10
+https://trueconf.com/download/room/linux/trueconf_room_ubuntu2110_amd64.deb
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~deb10_amd64.deb
+### Ubuntu 21.10 for Raspberry Pi
 
-### debian-11
+https://trueconf.com/download/room/linux/trueconf_room_ubuntu2110_arm64.deb
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~astrace2.12_amd64.deb
+### Astra Linux CE 2.12
 
-### astra-1.7
+https://trueconf.ru/download/room/linux/trueconf_room_astralinux_ce212_x86_64.deb
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~astrase1.7_amd64.deb
+### Astra Linux SE 1.7
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~astrase1.7_amd64_signed.deb
+https://trueconf.ru/download/room/linux/trueconf_room_astralinux_se17_x86_64.deb
 
-### astra-1.6
+### Astra Linux SE 1.6
 
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~astrase1.6_amd64.deb
-
-https://trueconf.com/download/sdk/trueconf-room_4.0.0.1401-1~astrase1.6_amd64_signed.deb
+https://trueconf.ru/download/room/linux/trueconf_room_astralinux_se16_x86_64.deb
 
 ### About TrueConf Room
 
-* Visit [Conference Room Software](https://trueconf.com/products/room.html)
+Visit [Conference Room Software](https://trueconf.com/products/room.html)
