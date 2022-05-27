@@ -241,3 +241,80 @@ class Methods:
         '''
         command = {"method": "addToGroup", "groupId": groupId, "peerId": peerId}
         self.videosdk.command(command)
+
+    def allowRecord(self, peerId: str):
+        '''
+        Allow video recording for a user
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "allowRecord", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def block(self, peerId: str):
+        '''
+        Add user to block list
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "block", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def changeCurrentMonitor(self, monitorIndex: int):
+        '''
+        Move the main window to the specified monitor
+
+        Parameters:
+
+            monitorIndex: int
+                The specified monitor's index
+        '''
+        command = {"method": "changeCurrentMonitor", "monitorIndex": monitorIndex}
+        self.videosdk.command(command)
+
+    def changeVideoMatrixType(self, matrixType: int):
+        '''
+        Change the current matrix (layout) type.
+        '''
+        command = {"method": "changeVideoMatrixType", "matrixType": matrixType}
+        self.videosdk.command(command)
+
+    def changeWindowState(self, windowState: int, stayOnTop: bool):
+        '''
+        Change the state of the main application window.
+
+        Parameters:
+
+            windowState: int
+                Window state
+
+            stayOnTop: bool
+
+        '''
+        command = {"method": "changeWindowState", "windowState": windowState, "stayOnTop": stayOnTop}
+        self.videosdk.command(command)
+
+    def chatClear(self, id: str):
+        '''
+        Clear a user's chat history
+
+        Parameters:
+
+            id: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "chatClear", "id": id}
+        self.videosdk.command(command)
+
+    def clearCallHistory(self):
+        '''
+        Clear call history
+        '''
+        command = {"method": "clearCallHistory"}
+        self.videosdk.command(command)
