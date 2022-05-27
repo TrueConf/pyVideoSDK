@@ -413,7 +413,7 @@ M_turnRemoteMic = "turnRemoteMic"
 M_turnRemoteSpeaker = "turnRemoteSpeaker"
 M_unblock = "unblock"
 
-METHOD = {
+METHOD_RESPONSE = {
     M_getAppState: {"method": "getAppState", "appState": None},
     M_getHardware: {
       "method": "getHardware",
@@ -432,4 +432,12 @@ METHOD = {
       "DSCaptureList": None,
       "result": None
     },
+    M_acceptFile: {"method": "acceptFile", "result": None},
+    M_acceptInvitationToPodium: {"method" : "acceptInvintationToPodium", "result": None},
+    M_acceptRequestCameraControl: {"method": "acceptRequestCameraControl", "result": None},
+    M_acceptRequestToPodium: {"method": "acceptRequestToPodium", "result": None},
+}
+
+
+
 }
