@@ -1,7 +1,7 @@
-﻿import pyVideoSDK
+﻿from pyVideoSDK import VideoSDK
 
 class Methods:
-    def __init__(self, videosdk: pyVideoSDK.VideoSDK):
+    def __init__(self, videosdk: VideoSDK):
         self.videosdk = videosdk
 
     def __del__(self):
@@ -156,5 +156,88 @@ class Methods:
         command = {"method" : "getHardware"}
         self.videosdk.command(command)
 
-    
+    def acceptFile(self, id: int):
+        '''
+        Accept incoming file
 
+        Parameters:
+
+            id: int
+                request ID
+        '''
+        command = {"method": "acceptFile", "id": id}
+        self.videosdk.command(command)
+
+    def acceptInvitationToPodium(self):
+        '''
+        Accept an incoming request to the podium
+        '''
+        command = {"method": "acceptInvitationToPodium"}
+        self.videosdk.command(command)
+
+    def acceptRequestCameraControl(self, callId: str):
+        '''
+        Allow remote camera control
+
+        Parameters:
+
+            callId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "acceptRequestCameraControl", "callId": callId}
+        self.videosdk.command(command)
+
+    def acceptRequestToPodium(self, peerId: str):
+        '''
+        Allow the user to enter the podium
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "acceptRequestToPodium", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def addSlide(self, fileId: int):
+        '''
+        Add a new slide to SlideShow
+
+        Parameters:
+
+            fileId: int
+
+                File ID in http-server
+        '''
+        command = {"method": "addSlide", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def addToAbook(self, peerId: str, peerDn: str):
+        '''
+        Add a user to address book
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+            peerDn: str
+                Display name
+        '''
+        command = {"method": "addToAbook", "peerId" : peerId, "peerDn": peerDn}
+        self.videosdk.command(command)
+
+    def addToGroup(self, groupId: int, peerId: str):
+        '''
+        Add the user to a group in the address book
+
+        Parameters:
+
+            groupId: int
+              Group ID
+
+            peerId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "addToGroup", "groupId": groupId, "peerId": peerId}
+        self.videosdk.command(command)

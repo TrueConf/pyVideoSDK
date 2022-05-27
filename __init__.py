@@ -442,7 +442,7 @@ class VideoSDK:
         return self.session_status in [SessionStatus.connected, SessionStatus.normal]
 
 # ========================================================================================
-def open_session(ip: str, port: int = 80, pin: str = "", debug: bool = False): 
+def open_session(ip: str, port: int = 80, pin: str = None, debug: bool = False): 
     """
     Create a new object instance and open a session.
 
