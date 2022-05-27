@@ -63,8 +63,8 @@ class Methods:
     def connectToServer(self, server: str, port: int = 4307):
         """Connect to TrueConf Server
         
-        Parameters
-        ----------
+        Parameters:
+
             server: str
                 Server address. For example, IP address;
             port: int
@@ -317,4 +317,60 @@ class Methods:
         Clear call history
         '''
         command = {"method": "clearCallHistory"}
+        self.videosdk.command(command)
+
+    def clearFileTransfer(self):
+        '''
+        Clear file sharing history and delete files
+        '''
+        command = {"method": "clearFileTransfer"}
+        self.videosdk.command(command)
+
+    def clearTokens(self):
+        '''
+        Clear all tokens
+        '''
+        command = {"method": "clearTokens"}
+        self.videosdk.command(command)
+
+    def connectToService(self):
+        '''
+        Connect to trueconf.com service
+        '''
+        command = {"method": "connectToService"}
+        self.videosdk.command(command)
+
+    def createGroup(self, name: str):
+        '''
+        Create a users group in address book
+        '''
+        command = {"method": "createGroup", "name": name}
+        self.videosdk.command(command)
+
+    def createNDIDevice(self, deviceId: str):
+        '''
+        Create an NDI source from a conference participant
+
+        Parameters:
+
+            deviceId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.createNDIDevice("user1@some.server")
+        '''
+        command = {"method": "createNDIDevice", "deviceId": deviceId}
+        self.videosdk.command(command)
+
+    def deleteData(self, containerName: str):
+        '''
+        Delete a data container
+
+        Parameters:
+
+            containerName: str
+                Container name
+        '''
+        command = {"method": "deleteData", "containerName": containerName}
         self.videosdk.command(command)

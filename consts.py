@@ -30,6 +30,7 @@ CAUSE = {
 '''
   All Events
 '''
+EV_ALL = "ALL"
 EV_abReceivedAfterLogin = "abReceivedAfterLogin"
 EV_allSlidesCachingStopped = "allSlidesCachingStopped"
 EV_allSlidesRemoved = "allSlidesRemoved"
@@ -181,7 +182,7 @@ EV_videoSlotRemovedFromMonitor = "videoSlotRemovedFromMonitor"
 EV_windowStateChanged = "windowStateChanged"
 
 EVENT = {
-    "ALL": {},
+    EV_ALL: {},
     EV_appStateChanged: {"event": "appStateChanged", "appState": None},
     EV_incomingChatMessage: {"event": "incomingChatMessage", "peerId": None, "peerDn": None, "message": None, "time": None, "method": "event"},
     EV_inviteReceived: {"event": "inviteReceived", "peerId": None, "peerDn": None, "type": None, "confId": None, "method": "event"},
@@ -447,6 +448,15 @@ METHOD_RESPONSE = {
     M_changeWindowState: {"method": "changeWindowState", "result": None},
     M_chatClear: {"method": "chatClear", "result": None},
     M_clearCallHistory: {"method": "clearCallHistory", "result": None},
+    M_clearFileTransfer: {"method": "clearFileTransfer", "result": None},
+    M_clearTokens: {"method": "clearTokens", "result": None},
+    M_connectToServer: {"method": "connectToServer", "result": None},
+    M_connectToService: {"method": "connectToService", "result": None},
+    M_createConference: {"method": "createConference", "result": None},
+    M_createGroup: {"method": "createGroup", "result": None},
+    M_createNDIDevice: {"method" : "createNDIDevice", "result": None},
+    M_deleteData: {"method" : "deleteData", "result": None},
+
 
 }
 
