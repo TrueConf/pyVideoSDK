@@ -436,8 +436,19 @@ METHOD_RESPONSE = {
     M_acceptInvitationToPodium: {"method" : "acceptInvintationToPodium", "result": None},
     M_acceptRequestCameraControl: {"method": "acceptRequestCameraControl", "result": None},
     M_acceptRequestToPodium: {"method": "acceptRequestToPodium", "result": None},
+    #M_activateLicense
+    M_addSlide: {"method": "addSlide", "result": None},
+    M_addToAbook: {"method": "addToAbook", "peerId": None, "result": None},
+    M_addToGroup: {"method": "addToGroup", "result": None},
+    M_allowRecord: {"method": "allowRecord", "result": None},
+    M_block: {"method": "block", "peerId": None, "result": None},
+    M_changeCurrentMonitor: {"method": "changeCurrentMonitor", "result": None},
+    M_changeVideoMatrixType: {"method": "changeVideoMatrixType", "result": None},
+    M_changeWindowState: {"method": "changeWindowState", "result": None},
+    M_chatClear: {"method": "chatClear", "result": None},
+    M_clearCallHistory: {"method": "clearCallHistory", "result": None},
+
 }
 
 
 
-}
