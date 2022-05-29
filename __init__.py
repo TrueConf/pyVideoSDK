@@ -356,6 +356,7 @@ class VideoSDK:
             self.lock.release()
 
     def run(self):
+        print("\nPress Ctrl+c for exit.\n")
         try:
             while True:
                 if not self.isConnected():
