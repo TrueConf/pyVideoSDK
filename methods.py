@@ -374,3 +374,111 @@ class Methods:
         '''
         command = {"method": "deleteData", "containerName": containerName}
         self.videosdk.command(command)
+
+    def deleteFileTransferFile(self, fileId: int):
+        '''
+        Delete a file from the file sharing history
+
+        Parameters:
+
+            fileId: int
+                File ID
+        '''
+        command = {"method": "deleteFileTransferFile", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def deleteNDIDevice(self, deviceId: str):
+        '''
+        Delete NDI source
+
+        Parameters:
+
+            deviceId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.deleteNDIDevice("user1@some.server")
+        '''
+        command = {"method": "deleteNDIDevice", "deviceId": deviceId}
+        self.videosdk.command(command)
+
+    def denyRecord(self, peerId: str):
+        '''
+        Deny recording audio stream and video stream
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "denyRecord", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def enableAudioReceiving(self, peerId: str, enable: bool):
+        '''
+        Enable or disable audio receiving from user - "peerId"
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+            enable: bool
+        '''
+        command = {"method": "enableAudioReceiving", "peerId": peerId, "enable": enable}
+        self.videosdk.command(command)
+
+    def enableVideoReceiving(self, peerId: str, enable: bool):
+        '''
+        Enable or disable video receiving from user - "peerId"
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+            enable: bool
+        
+        Example::
+
+            # Switching video off from user "user1@some.server"
+            sdk.enableVideoReceiving("user1@some.server", False)
+        '''
+        command = {"method": "enableVideoReceiving", "peerId": peerId, "enable": enable}
+        self.videosdk.command(command)
+
+    def expandCallToMulti(self, title: str, inviteList: list):
+        '''
+        Transform the current videocall to a group conference
+
+        Parameters:
+
+            title: str
+                Conference title
+
+            inviteList: list
+                Invited list
+        
+        Example::
+
+            sdk.expandCallToMulti(title="New group conference", inviteList=["user1@some.server", "user2@some.server", "user3@some.server"])
+        '''
+        command = {"method": "expandCallToMulti", "title": title, "inviteList": inviteList}
+        self.videosdk.command(command)
+
+    def fireMyEvent(self, data: str):
+        '''
+        Fire a custom event
+
+        Parameters:
+
+            data: str
+                Any data string
+
+        Example::
+
+             sdk.fireMyEvent("power off")
+        '''
+        command = {"method": "fireMyEvent", "data": data}
+        self.videosdk.command(command)

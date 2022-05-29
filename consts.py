@@ -456,6 +456,16 @@ METHOD_RESPONSE = {
     M_createGroup: {"method": "createGroup", "result": None},
     M_createNDIDevice: {"method" : "createNDIDevice", "result": None},
     M_deleteData: {"method" : "deleteData", "result": None},
+    M_deleteFileTransferFile: {"method": "deleteFileTransferFile", "result": None},
+    M_deleteNDIDevice: {"method": "deleteNDIDevice", "result": None},
+    M_denyRecord: {"method": "denyRecord", "result": None},
+    M_enableAudioReceiving: {"method": "enableAudioReceiving", "result": None},
+    M_enableVideoReceiving: {"method": "enableVideoReceiving", "result": None},
+    M_expandCallToMulti: {"method": "expandCallToMulti", "result": None},
+    M_fireMyEvent: {"method": "fireMyEvent", "result": None},
+
+
+
 
 
 }
