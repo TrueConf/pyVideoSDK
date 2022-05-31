@@ -209,7 +209,7 @@ class VideoSDK:
         # CHECK SCHEMA
         if check_schema({"error": None}, response):
             s = f'VideoSDK error: {response["error"]}'
-            logger.error(s)
+            logger.warning(s)
 
     def __process_method(self, response) -> bool:
         result = check_schema({"method": None}, response) and not check_schema({"event": None}, response)
