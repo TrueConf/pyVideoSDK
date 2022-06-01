@@ -12,11 +12,11 @@ def getHttpPort(ip: str, room_port: int, logger: Logger) -> int:
         json_file = requests.get(url=CONFIG_JSON_URL.format(ip, room_port))
         data = json_file.json()
         port = data["config"]["http"]["port"]
-        logger.info(f'HTTP port: {port}')
+        #logger.info(f'HTTP port: {port}')
     except Exception as e:
         port = DEFAULT_HTTP_PORT
-        logger.warning(f'Failed to fetch HTTP port: {e}')
-        logger.warning(f'Set HTTP port to default: {port}')
+        #logger.warning(f'Failed to fetch HTTP port: {e}')
+        #logger.warning(f'Set HTTP port to default: {port}')
 
     return port
 
@@ -27,10 +27,10 @@ def getWebsocketPort(ip: str, room_port: int, logger: Logger) -> int:
         json_file = requests.get(url=CONFIG_JSON_URL.format(ip, room_port))
         data = json_file.json()
         port = data["config"]["websocket"]["port"]
-        logger.info(f'WebSocket port: {port}')
+        #logger.info(f'WebSocket port: {port}')
     except Exception as e:
         port = DEFAULT_WEBSOCKET_PORT
-        logger.warning(f'Failed to fetch current websocket port: {e}')
-        logger.warning(f'Set WebSocket port to default: {port}')
+        #logger.warning(f'Failed to fetch current websocket port: {e}')
+        #logger.warning(f'Set WebSocket port to default: {port}')
 
     return port
