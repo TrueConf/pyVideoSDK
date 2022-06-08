@@ -482,3 +482,24 @@ class Methods:
         '''
         command = {"method": "fireMyEvent", "data": data}
         self.videosdk.command(command)
+
+    def getAbook(self):
+        '''
+        Request the address book
+        '''
+        command = {"method": "getAbook"}
+        self.videosdk.command(command)
+
+    def getAllUserContainersNames(self):
+        '''
+        Request names of all data containers
+        '''
+        command = {"method": "getAllUserContainersNames"}
+        self.videosdk.command(command)
+
+    def getAppSndDev(self):
+        '''
+        Request information about the current sound playback device
+        '''
+        command = {"method": "getAppSndDev"}
+        self.videosdk.command(command)

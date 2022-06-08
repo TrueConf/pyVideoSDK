@@ -463,9 +463,9 @@ METHOD_RESPONSE = {
     M_enableVideoReceiving: {"method": "enableVideoReceiving", "result": None},
     M_expandCallToMulti: {"method": "expandCallToMulti", "result": None},
     M_fireMyEvent: {"method": "fireMyEvent", "result": None},
-
-
-
+    M_getAbook: {"method": "getAbook", "abook": None, "result": None},
+    M_getAllUserContainersNames: {"method": "getAllUserContainersNames", "containersNames": None, "result": None},
+    M_getAppSndDev: {"method" : "getAppSndDev", "name" : None, "description" : None, "result" : False},
 
 
 }
