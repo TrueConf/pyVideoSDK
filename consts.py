@@ -466,6 +466,8 @@ METHOD_RESPONSE = {
     M_getAbook: {"method": "getAbook", "abook": None, "result": None},
     M_getAllUserContainersNames: {"method": "getAllUserContainersNames", "containersNames": None, "result": None},
     M_getAppSndDev: {"method" : "getAppSndDev", "name" : None, "description" : None, "result" : False},
+    M_getAppState: {"method": "getAppState", "embeddedHttpPort": None, "appState": None, "result": None},
+
 
 
 }

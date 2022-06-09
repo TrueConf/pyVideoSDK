@@ -503,3 +503,10 @@ class Methods:
         '''
         command = {"method": "getAppSndDev"}
         self.videosdk.command(command)
+
+    def getAppState(self):
+        '''
+        Request the application state
+        '''
+        command = {"method": "getAppState"}
+        self.videosdk.command(command)        
