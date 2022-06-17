@@ -509,4 +509,37 @@ class Methods:
         Request the application state
         '''
         command = {"method": "getAppState"}
-        self.videosdk.command(command)        
+        self.videosdk.command(command)
+    
+    def getAudioDelayDetectorInfo(self):
+        '''
+        Get an echo test information
+        '''
+        command = {"method": "getAudioDelayDetectorInfo"}
+        self.videosdk.command(command)
+    
+    def getAudioMute(self):
+        '''
+        Get audio state
+        '''
+        command = {"method": "getAudioMute"}
+        self.videosdk.command(command)
+
+    def getAudioReceivingLevel(self, peerId: str):
+        '''
+        Get the current volume level of the conference participant
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+        '''
+        command = {"method": "getAudioReceivingLevel", "peerId": peerId}
+        self.videosdk.command(command)
+    
+    def getAuthInfo(self):
+        '''
+        Get information about the type of protection for the administrator and user accounts
+        '''
+        command = {"method": "getAuthInfo"}
+        self.videosdk.command(command)
