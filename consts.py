@@ -467,9 +467,10 @@ METHOD_RESPONSE = {
     M_getAllUserContainersNames: {"method": "getAllUserContainersNames", "containersNames": None, "result": None},
     M_getAppSndDev: {"method" : "getAppSndDev", "name" : None, "description" : None, "result" : False},
     M_getAppState: {"method": "getAppState", "embeddedHttpPort": None, "appState": None, "result": None},
-
-
-
+    M_getAudioDelayDetectorInfo: {"method": "getAudioDelayDetectorInfo", "state": None, "result": None},
+    M_getAudioMute: {"method": "getAudioMute", "mute": None, "result": None},
+    M_getAudioReceivingLevel: {"method": "getAudioReceivingLevel", "level": None, "result": None},
+    M_getAuthInfo: {"method": "getAuthInfo","adminAuth": None, "userAuth": None, "result": None}
 }
 
 
