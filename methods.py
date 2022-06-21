@@ -545,71 +545,65 @@ class Methods:
         self.videosdk.command(command)
 
     def getAvailableServersList(self):
-        '''
-        getAvailableServersList
-        '''
         command = {"method": "getAvailableServersList"}
         self.videosdk.command(command)
 
     def getBackground(self):
-        '''
-        getBackground
-        '''
         command = {"method": "getBackground"}
         self.videosdk.command(command)
 
-    def banList(self):
+    def getBanList(self):
         '''
-        banList
+        Get the list of blocked users
         '''
-        command = {"method": "banList"}
+        command = {"method": "getBanList"}
         self.videosdk.command(command)
 
     def getBroadcastPicture(self):
         '''
-        getBroadcastPicture
+        Get the name of the file containing the picture that can be broadcasted instead of your own video
         '''
         command = {"method": "getBroadcastPicture"}
         self.videosdk.command(command)
 
     def getBroadcastSelfie(self):
         '''
-        getBroadcastSelfie
+        Get to know if you can view the video using current camera
         '''
         command = {"method": "getBroadcastSelfie"}
         self.videosdk.command(command)
 
     def getCallHistory(self, count: int):
         '''
-        getCallHistory
+        Get a list of recent calls
+
+        Parameters:
+
+            count: int
+                Amount of requested calls
+
+        Example::
+
+            sdk.getCallHistory(10)
         '''
         command = {"method": "getCallHistory", "count": count}
         self.videosdk.command(command)
 
     def getChatLastMessages(self, id: str, beginNumber: int, count: int):
-        '''
-        getChatLastMessages
-        '''
         command = {"method": "getChatLastMessages", "id": id, "beginNumber": beginNumber, "count": count}
         self.videosdk.command(command)
 
     def getConferenceParticipants(self):
         '''
-        getConferenceParticipants
+        To view conference participants list
         '''
         command = {"method": "getConferenceParticipants"}
         self.videosdk.command(command)
 
     def getConferences(self):
-        '''
-        getConferences
-        '''
         command = {"method": "getConferences"}
         self.videosdk.command(command)
 
     def getConnected(self):
-        '''
-        getConnected
-        '''
         command = {"method": "getConnected"}
         self.videosdk.command(command)
