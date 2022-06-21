@@ -510,14 +510,14 @@ class Methods:
         '''
         command = {"method": "getAppState"}
         self.videosdk.command(command)
-    
+
     def getAudioDelayDetectorInfo(self):
         '''
         Get an echo test information
         '''
         command = {"method": "getAudioDelayDetectorInfo"}
         self.videosdk.command(command)
-    
+
     def getAudioMute(self):
         '''
         Get audio state
@@ -536,10 +536,80 @@ class Methods:
         '''
         command = {"method": "getAudioReceivingLevel", "peerId": peerId}
         self.videosdk.command(command)
-    
+
     def getAuthInfo(self):
         '''
         Get information about the type of protection for the administrator and user accounts
         '''
         command = {"method": "getAuthInfo"}
+        self.videosdk.command(command)
+
+    def getAvailableServersList(self):
+        '''
+        getAvailableServersList
+        '''
+        command = {"method": "getAvailableServersList"}
+        self.videosdk.command(command)
+
+    def getBackground(self):
+        '''
+        getBackground
+        '''
+        command = {"method": "getBackground"}
+        self.videosdk.command(command)
+
+    def banList(self):
+        '''
+        banList
+        '''
+        command = {"method": "banList"}
+        self.videosdk.command(command)
+
+    def getBroadcastPicture(self):
+        '''
+        getBroadcastPicture
+        '''
+        command = {"method": "getBroadcastPicture"}
+        self.videosdk.command(command)
+
+    def getBroadcastSelfie(self):
+        '''
+        getBroadcastSelfie
+        '''
+        command = {"method": "getBroadcastSelfie"}
+        self.videosdk.command(command)
+
+    def getCallHistory(self, count: int):
+        '''
+        getCallHistory
+        '''
+        command = {"method": "getCallHistory", "count": count}
+        self.videosdk.command(command)
+
+    def getChatLastMessages(self, id: str, beginNumber: int, count: int):
+        '''
+        getChatLastMessages
+        '''
+        command = {"method": "getChatLastMessages", "id": id, "beginNumber": beginNumber, "count": count}
+        self.videosdk.command(command)
+
+    def getConferenceParticipants(self):
+        '''
+        getConferenceParticipants
+        '''
+        command = {"method": "getConferenceParticipants"}
+        self.videosdk.command(command)
+
+    def getConferences(self):
+        '''
+        getConferences
+        '''
+        command = {"method": "getConferences"}
+        self.videosdk.command(command)
+
+    def getConnected(self):
+        '''
+        getConnected
+        '''
+        command = {"method": "getConnected"}
         self.videosdk.command(command)
