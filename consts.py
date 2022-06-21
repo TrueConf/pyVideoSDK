@@ -470,7 +470,17 @@ METHOD_RESPONSE = {
     M_getAudioDelayDetectorInfo: {"method": "getAudioDelayDetectorInfo", "state": None, "result": None},
     M_getAudioMute: {"method": "getAudioMute", "mute": None, "result": None},
     M_getAudioReceivingLevel: {"method": "getAudioReceivingLevel", "level": None, "result": None},
-    M_getAuthInfo: {"method": "getAuthInfo","adminAuth": None, "userAuth": None, "result": None}
+    M_getAuthInfo: {"method": "getAuthInfo", "adminAuth": None, "userAuth": None, "result": None},
+    M_getAvailableServersList: {"method": "getAvailableServersList", "result": None},
+    M_getBackground: {"method": "getBackground", "isCustomImage": None, "fileId": None, "result": None},
+    M_getBanList: {"method": "getBanList", "banList": None, "result": None},
+    M_getBroadcastPicture: {"method": "getBroadcastPicture", "fileName": None, "fileId": None, "result": None},
+    M_getBroadcastSelfie: {"method": "getBroadcastSelfie", "enabled": None, "fps": None, "result": None},
+    M_getCallHistory: {"method": "getCallHistory", "calls" : None, "lastView": None, "result": None},
+    M_getChatLastMessages: {"method": "getChatLastMessages", "messages": None, "result": None},
+    M_getConferenceParticipants: {"method": "getConferenceParticipants", "confId": None, "participants": None, "result": None},
+    M_getConferences: {"method": "getConferences", "confId": None, "result": None},
+    M_getConnected: {"method": "getConnected", "state": None, "serverInfo": None, "result": None},
 }
 
 
