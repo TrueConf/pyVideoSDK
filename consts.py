@@ -415,7 +415,6 @@ M_turnRemoteSpeaker = "turnRemoteSpeaker"
 M_unblock = "unblock"
 
 METHOD_RESPONSE = {
-    M_getAppState: {"method": "getAppState", "appState": None},
     M_getHardware: {
       "method": "getHardware",
       "audioCapturers": None,
@@ -437,7 +436,7 @@ METHOD_RESPONSE = {
     M_acceptInvitationToPodium: {"method" : "acceptInvintationToPodium", "result": None},
     M_acceptRequestCameraControl: {"method": "acceptRequestCameraControl", "result": None},
     M_acceptRequestToPodium: {"method": "acceptRequestToPodium", "result": None},
-    #M_activateLicense
+    M_activateLicense: {"method": "activateLicense", "status": None, "result": None},
     M_addSlide: {"method": "addSlide", "result": None},
     M_addToAbook: {"method": "addToAbook", "peerId": None, "result": None},
     M_addToGroup: {"method": "addToGroup", "result": None},
@@ -481,6 +480,37 @@ METHOD_RESPONSE = {
     M_getConferenceParticipants: {"method": "getConferenceParticipants", "confId": None, "participants": None, "result": None},
     M_getConferences: {"method": "getConferences", "confId": None, "result": None},
     M_getConnected: {"method": "getConnected", "state": None, "serverInfo": None, "result": None},
+    M_getContactDetails: {"method": "getContactDetails", "result": None},
+    M_getCreatedNDIDevices: {"method": "getCreatedNDIDevices", "createdNDIDevices": None, "result": None},
+    M_getCrop: {"method": "getCrop", "enable": None, "result": None},
+    M_getCurrentUserProfileUrl: {"method": "getCurrentUserProfileUrl", "url": None, "result": None},
+    M_getDisplayNameById: {"method": "getDisplayNameById", "peerDn": None, "peerId": None, "result": None},
+    M_getFileInfo: {
+        "method": "getFileInfo",
+        "id": None,
+        "status": None,
+        "directionType": None,
+        "fileName": None,
+        "fileId": None,
+        "peerId": None,
+        "peerDisplayName": None,
+        "timestamp": None,
+        "confId": None,
+        "totalSize": None,
+        "processedSize": None,
+        "speed": None,
+        "peersCount": None,
+        "result": None,
+    },
+    M_getFileList: {"method": "getFileList", "fileList": None, "result": None},
+    M_getFileRequests: {"method": "getFileRequests", "files": None, "result": None},
+    M_getFileTransferAvailability: {"method": "getFileTransferAvailability", "available": None, "result": None},
+    M_getFileTransferInfo: {"method": "getFileTransferInfo", "files": None, "result": None},
+    M_getFileUploads: {"method": "getFileUploads", "files": None, "result": None},
+    M_getGroups: {"method": "getGroups", "groups": None, "result": None},
+    M_getHardwareKey: {"method": "getHardwareKey", "key": None, "result": None},
+    M_getHttpServerSettings: {"method": "getHttpServerSettings", "settings": None, "result": None},
+    M_getHttpServerState: {"method": "getHttpServerState", "state": None, "result": None},
 }
 
 
