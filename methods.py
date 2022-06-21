@@ -733,3 +733,105 @@ class Methods:
         '''
         command = {"method": "getHttpServerState"}
         self.videosdk.command(command)
+
+    def getIncomingCameraControlRequests(self):
+        command = {"method": "getIncomingCameraControlRequests"}
+        self.videosdk.command(command)
+
+    def getInfoWidgetsState(self):
+        command = {"method": "getInfoWidgetsState"}
+        self.videosdk.command(command)
+
+    def getLastCallsViewTime(self):
+        command = {"method": "getLastCallsViewTime"}
+        self.videosdk.command(command)
+
+    def getLastSelectedConference(self):
+        command = {"method": "getLastSelectedConference"}
+        self.videosdk.command(command)
+
+    def getLastUsedServersList(self, count: int):
+        command = {"method": "getLastUsedServersList", "count": count}
+        self.videosdk.command(command)
+
+    def getLicenseServerStatus(self):
+        command = {"method": "getLicenseServerStatus"}
+        self.videosdk.command(command)
+
+    def getLicenseType(self):
+        '''
+        Get the information about pre-installed license
+        '''
+        command = {"method": "getLicenseType"}
+        self.videosdk.command(command)
+
+    def getListOfChats(self):
+        '''
+        Get the list of chats
+        '''
+        command = {"method": "getListOfChats"}
+        self.videosdk.command(command)
+
+    def getLogin(self):
+        command = {"method": "getLogin"}
+        self.videosdk.command(command)
+
+    def getLogo(self):
+        command = {"method": "getLogo"}
+        self.videosdk.command(command)
+
+    def getMaxConfTitleLength(self):
+        '''
+        Get maximum length of the conference title
+        '''
+        command = {"method": "getMaxConfTitleLength"}
+        self.videosdk.command(command)
+
+    def getMicMute(self):
+        '''
+        To get the information on the microphone state (turned on or turned off)
+        '''
+        command = {"method": "getMicMute"}
+        self.videosdk.command(command)
+
+    def getModes(self):
+        '''
+        Get the list of modes and pins for the specified capture board
+        '''
+        command = {"method": "getModes"}
+        self.videosdk.command(command)
+
+    def getMonitorsInfo(self):
+        '''
+        Get the information about monitors
+        '''
+        command = {"method": "getMonitorsInfo"}
+        self.videosdk.command(command)
+
+    def getNDIState(self):
+        command = {"method": "getNDIState"}
+        self.videosdk.command(command)
+
+    def getOutgoingBitrate(self):
+        command = {"method": "getOutgoingBitrate"}
+        self.videosdk.command(command)
+
+    def getOutgoingCameraControlRequests(self):
+        command = {"method": "getOutgoingCameraControlRequests"}
+        self.videosdk.command(command)
+
+    def getOutputSelfVideoRotateAngle(self):
+        command = {"method": "getOutputSelfVideoRotateAngle"}
+        self.videosdk.command(command)
+
+    def getProperties(self):
+        command = {"method": "getProperties"}
+        self.videosdk.command(command)
+
+    def getPtzControls(self):
+        command = {"method": "getPtzControls"}
+        self.videosdk.command(command)
+
+    def getRemotelyControlledCameras(self):
+        command = {"method": "getRemotelyControlledCameras"}
+        self.videosdk.command(command)
