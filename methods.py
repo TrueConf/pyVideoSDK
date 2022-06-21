@@ -199,6 +199,21 @@ class Methods:
         command = {"method": "acceptRequestToPodium", "peerId": peerId}
         self.videosdk.command(command)
 
+    def activateLicense(self, key: str):
+        '''
+        Activate license key
+
+        Parameters:
+
+            key: str
+
+        Example::
+
+            sdk.activateLicense("G3K3-E929-837P-BHNQ-GKAV-GSLH-T5YU-3TJ8-ECWD-YBRV-J7A2")
+        '''
+        command = {"method": "activateLicense", "key": key}
+        self.videosdk.command(command)
+
     def addSlide(self, fileId: int):
         '''
         Add a new slide to SlideShow
@@ -606,4 +621,115 @@ class Methods:
 
     def getConnected(self):
         command = {"method": "getConnected"}
+        self.videosdk.command(command)
+
+    def getContactDetails(self, peerId: str):
+        '''
+        Get contact’s personal details
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.getContactDetails("user1@some.server")
+        '''
+        command = {"method": "getContactDetails", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def getCreatedNDIDevices(self):
+        command = {"method": "getCreatedNDIDevices"}
+        self.videosdk.command(command)
+
+    def getCrop(self):
+        command = {"method": "getCrop"}
+        self.videosdk.command(command)
+
+    def getCurrentUserProfileUrl(self):
+        command = {"method": "getCurrentUserProfileUrl"}
+        self.videosdk.command(command)
+
+    def getDisplayNameById(self, peerId: str):
+        '''
+        Get display name using user ID
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.getDisplayNameById("user1@some.server")
+        '''
+        command = {"method": "getDisplayNameById", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def getFileInfo(self, id: int):
+        command = {"method": "getFileInfo", "id": id}
+        self.videosdk.command(command)
+
+    def getFileList(self):
+        '''
+        Get the list of URLs of downloaded files
+        '''
+        command = {"method": "getFileList"}
+        self.videosdk.command(command)
+
+    def getFileRequests(self):
+        '''
+        Get the list of incoming files
+        '''
+        command = {"method": "getFileRequests"}
+        self.videosdk.command(command)
+
+    def getFileTransferAvailability(self):
+        '''
+        Get file transfer availability
+        '''
+        command = {"method": "getFileTransferAvailability"}
+        self.videosdk.command(command)
+
+    def getFileTransferInfo(self):
+        '''
+        Get file transfer information
+        '''
+        command = {"method": "getFileTransferInfo"}
+        self.videosdk.command(command)
+
+    def getFileUploads(self):
+        '''
+        Get the list of outgoing files
+        '''
+        command = {"method": "getFileUploads"}
+        self.videosdk.command(command)
+
+    def getGroups(self):
+        '''
+        Get information about groups
+        '''
+        command = {"method": "getGroups"}
+        self.videosdk.command(command)
+
+    def getHardwareKey(self):
+        '''
+        Get a unique hardware key to create a license
+        '''
+        command = {"method": "getHardwareKey"}
+        self.videosdk.command(command)
+
+    def getHttpServerSettings(self):
+        '''
+        Get http server settings
+        '''
+        command = {"method": "getHttpServerSettings"}
+        self.videosdk.command(command)
+
+    def getHttpServerState(self):
+        '''
+        Get http server status
+        '''
+        command = {"method": "getHttpServerState"}
         self.videosdk.command(command)
