@@ -835,3 +835,176 @@ class Methods:
     def getRemotelyControlledCameras(self):
         command = {"method": "getRemotelyControlledCameras"}
         self.videosdk.command(command)
+
+    def getRenderInfo(self):
+        command = {"method": "getRenderInfo"}
+        self.videosdk.command(command)
+
+    def getScheduler(self):
+        command = {"method": "getScheduler"}
+        self.videosdk.command(command)
+
+    def getServerDomain(self):
+        command = {"method": "getServerDomain"}
+        self.videosdk.command(command)
+
+    def getSettings(self):
+        '''
+        Get the settings list
+        '''
+        command = {"method": "getSettings"}
+        self.videosdk.command(command)
+
+    def getSlideShowCache(self):
+        command = {"method": "getSlideShowCache"}
+        self.videosdk.command(command)
+
+    def getSlideShowInfo(self):
+        '''
+        Get information about the slideshow
+        '''
+        command = {"method": "getSlideShowInfo"}
+        self.videosdk.command(command)
+
+    def getSystemInfo(self):
+        command = {"method": "getSystemInfo"}
+        self.videosdk.command(command)
+
+    def getTariffRestrictions(self):
+        command = {"method": "getTariffRestrictions"}
+        self.videosdk.command(command)
+
+    def getTokenForHttpServer(self):
+        command = {"method": "getTokenForHttpServer"}
+        self.videosdk.command(command)
+
+    def getTrueConfRoomProKey(self):
+        command = {"method": "getTrueConfRoomProKey"}
+        self.videosdk.command(command)
+
+    def getVideoMatrix(self):
+        '''
+        Get the information about current video matrix
+        '''
+        command = {"method": "getVideoMatrix"}
+        self.videosdk.command(command)
+
+    def getVideoMute(self):
+        '''
+        Get current status of video streaming
+        '''
+        command = {"method": "getVideoMute"}
+        self.videosdk.command(command)
+
+    def gotoPodium(self):
+        '''
+        it is used to take the podium.
+        If you are the conference owner, you will take it immediately, if not, you will have to wait until the conference owner allows you to take the podium.
+        You will be informed about taking the podium with a respective notification (when the onRoleEventOccurred notification is received).
+        '''
+        command = {"method": "gotoPodium"}
+        self.videosdk.command(command)
+
+    def hideVideoSlot(self, callId: str):
+        '''
+        Hide video slot in layout
+
+        Parameters:
+
+            callId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.hideVideoSlot("user1@some.server")
+
+        '''
+        command = {"method": "hideVideoSlot", "callId": callId}
+        self.videosdk.command(command)
+
+    def inviteToConference(self, peerId: str):
+        '''
+        Invite a user into the conference. It can be used only by the conference owner
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.inviteToConference("user1@some.server")
+        '''
+        command = {"method": "inviteToConference", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def inviteToPodium(self, peerId: str):
+        '''
+        Invite a user to take the podium. The command is possible only in a group conference
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.inviteToPodium("user1@some.server")
+        '''
+        command = {"method": "inviteToPodium", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def kickFromPodium(self, peerId: str):
+        '''
+        Remove a conference participant from the tribune
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.kickFromPodium("user1@some.server")
+        '''
+        command = {"method": "kickFromPodium", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def kickPeer(self, peerId: str):
+        '''
+        Remove a participant from the conference using participant’s peerId. It is used only in video conferences and only by the conference owner
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.kickPeer("user1@some.server")
+        '''
+        command = {"method": "kickPeer", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def leavePodium(self):
+        '''
+        Leave the podium
+        '''
+        command = {"method": "leavePodium"}
+        self.videosdk.command(command)
+
+    def loadData(self, containerName: str):
+        '''
+        Retrieve previously saved user data
+
+        Parameters:
+
+            containerName: str
+                Some container name, for example "testContainer"
+
+        Example::
+
+            sdk.loadData("testContainer")
+        '''
+        command = {"method": "loadData", "containerName": containerName}
+        self.videosdk.command(command)
