@@ -1015,11 +1015,12 @@ class Methods:
 
     def productRegistrationOffline(self, fileId: int):
         '''
-        activate license file offline
+        Activate license file offline
+
         Parameters:
 
             fileId: int
-                268535454
+                File ID
 
         Example::
 
@@ -1091,7 +1092,7 @@ class Methods:
         Parameters:
 
             id: int
-                268535454
+                File ID
 
         Example::
 
@@ -1158,12 +1159,12 @@ class Methods:
 
     def removeFromGroup(self, groupId: int, peerId: str):
         '''
-        remove user from group
+        Remove user from group
 
         Parameters:
 
             groupId: int
-                268535454
+                Group ID
             peerId: str
                 User ID (TrueConf ID)
 
@@ -1185,7 +1186,7 @@ class Methods:
         Parameters:
 
             groupId: int
-                268535454
+                Group ID
 
         Example::
 
