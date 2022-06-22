@@ -1008,3 +1008,192 @@ class Methods:
         '''
         command = {"method": "loadData", "containerName": containerName}
         self.videosdk.command(command)
+
+    def moveVideoSlotToMonitor(self, callId: str, monitorIndex: int):
+        command = {"method": "moveVideoSlotToMonitor", "callId": callId, "monitorIndex": monitorIndex}
+        self.videosdk.command(command)
+
+    def productRegistrationOffline(self, fileId: int):
+        '''
+        activate license file offline
+        Parameters:
+
+            fileId: int
+                268535454
+
+        Example::
+
+            sdk.productRegistrationOffline(268535454)
+        '''
+        command = {"method": "productRegistrationOffline", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def ptzDown(self):
+        '''
+        Move camera down
+        '''
+        command = {"method": "ptzDown"}
+        self.videosdk.command(command)
+
+    def ptzLeft(self):
+        '''
+        Move camera left
+        '''
+        command = {"method": "ptzLeft"}
+        self.videosdk.command(command)
+
+    def ptzRight(self):
+        '''
+        Move camera right
+        '''
+        command = {"method": "ptzRight"}
+        self.videosdk.command(command)
+
+    def ptzStop(self):
+        '''
+        Stops camera movement (pan/tilt/zoom)
+        '''
+        command = {"method": "ptzStop"}
+        self.videosdk.command(command)
+
+    def ptzUp(self):
+        '''
+        Move camera up
+        '''
+        command = {"method": "ptzUp"}
+        self.videosdk.command(command)
+
+    def ptzZoomDec(self):
+        '''
+        Reduce image
+        '''
+        command = {"method": "ptzZoomDec"}
+        self.videosdk.command(command)
+
+    def ptzZoomInc(self):
+        '''
+        Enlarge image
+        '''
+        command = {"method": "ptzZoomInc"}
+        self.videosdk.command(command)
+
+    def rebootSystem(self):
+        '''
+        Restart computer
+        '''
+        command = {"method": "rebootSystem"}
+        self.videosdk.command(command)
+
+    def rejectFile(self, id: int):
+        '''
+        Reject incoming file
+
+        Parameters:
+
+            id: int
+                268535454
+
+        Example::
+
+            sdk.rejectFile(268535454)
+        '''
+        command = {"method": "rejectFile", "id": id}
+        self.videosdk.command(command)
+
+    def rejectInvitationToPodium(self):
+        command = {"method": "rejectInvitationToPodium"}
+        self.videosdk.command(command)
+
+    def rejectRequestCameraControl(self):
+        command = {"method": "rejectRequestCameraControl"}
+        self.videosdk.command(command)
+
+    def rejectRequestToPodium(self, peerId: str):
+        command = {"method": "rejectRequestToPodium", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def remotelyControlledCameraPtzDown(self, cameraOwnerCallId: str):
+        command = {"method": "remotelyControlledCameraPtzDown", "cameraOwnerCallId": cameraOwnerCallId}
+        self.videosdk.command(command)
+
+    def remotelyControlledCameraPtzLeft(self, cameraOwnerCallId: str):
+        command = {"method": "remotelyControlledCameraPtzLeft", "cameraOwnerCallId": cameraOwnerCallId}
+        self.videosdk.command(command)
+
+    def remotelyControlledCameraPtzRight(self, cameraOwnerCallId: str):
+        command = {"method": "remotelyControlledCameraPtzRight", "cameraOwnerCallId": cameraOwnerCallId}
+        self.videosdk.command(command)
+
+    def remotelyControlledCameraPtzUp(self, cameraOwnerCallId: str):
+        command = {"method": "remotelyControlledCameraPtzUp", "cameraOwnerCallId": cameraOwnerCallId}
+        self.videosdk.command(command)
+
+    def remotelyControlledCameraPtzZoomDec(self, cameraOwnerCallId: str):
+        command = {"method": "remotelyControlledCameraPtzZoomDec", "cameraOwnerCallId": cameraOwnerCallId}
+        self.videosdk.command(command)
+
+    def remotelyControlledCameraPtzZoomInc(self, cameraOwnerCallId: str):
+        command = {"method": "remotelyControlledCameraPtzZoomInc", "cameraOwnerCallId": cameraOwnerCallId}
+        self.videosdk.command(command)
+
+    def removeAllSlides(self, removeFromServer: bool):
+        command = {"method": "removeAllSlides", "removeFromServer": removeFromServer}
+        self.videosdk.command(command)
+
+    def removeFromAbook(self, peerId: str):
+        '''
+        Remove user from address book
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.removeFromAbook("user1@some.server")
+        '''
+        command = {"method": "removeFromAbook", "peerId": peerId}
+        self.videosdk.command(command)
+
+    def removeFromGroup(self, groupId: int, peerId: str):
+        '''
+        remove user from group
+
+        Parameters:
+
+            groupId: int
+                268535454
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.removeFromAbook(268535454, "user1@some.server")
+        '''
+        command = {"method": "removeFromGroup", "groupId": groupId, "peerId": peerId}
+        self.videosdk.command(command)
+
+    def removeFromServersList(self, serverName: str):
+        command = {"method": "removeFromServersList", "serverName": serverName}
+        self.videosdk.command(command)
+
+    def removeGroup(self, groupId: int):
+        '''
+        Remove group
+
+        Parameters:
+
+            groupId: int
+                268535454
+
+        Example::
+
+            sdk.removeGroup(268535454)
+        '''
+        command = {"method": "removeGroup", "groupId": groupId}
+        self.videosdk.command(command)
+
+    def removeImageFromCachingQueue(self, fileId: int):
+        command = {"method": "removeImageFromCachingQueue", "fileId": fileId}
+        self.videosdk.command(command)
