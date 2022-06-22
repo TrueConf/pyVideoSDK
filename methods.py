@@ -1198,3 +1198,232 @@ class Methods:
     def removeImageFromCachingQueue(self, fileId: int):
         command = {"method": "removeImageFromCachingQueue", "fileId": fileId}
         self.videosdk.command(command)
+
+    def removeSlide(self, idx: int, removeFromServer: bool):
+        command = {"method": "removeSlide", "idx": idx, "removeFromServer": removeFromServer}
+        self.videosdk.command(command)
+
+    def removeVideoSlotFromMonitor(self, monitorIndex: int):
+        command = {"method": "removeVideoSlotFromMonitor", "monitorIndex": monitorIndex}
+        self.videosdk.command(command)
+
+    def renameGroup(self, groupId: int, newName: str):
+        '''
+        Rename group
+
+        Parameters:
+
+            groupId: int
+                Group ID
+            newName: str
+                New group name
+
+        Example::
+
+            sdk.renameGroup(268535454, "NewGroupName")
+        '''
+        command = {"method": "renameGroup", "groupId": groupId, "newName": newName}
+        self.videosdk.command(command)
+
+    def renameInAbook(self, peerId: str, peerDn: str):
+        '''
+        Rename user in address book
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            peerDn: str
+                New user display name
+
+        Example::
+
+            sdk.renameInAbook("user1@some.server", "NewUserName")
+        '''
+        command = {"method": "renameInAbook", "peerId": peerId, "peerDn": peerDn}
+        self.videosdk.command(command)
+
+    def requestParticipantCameraControl(self, callId: str):
+        command = {"method": "requestParticipantCameraControl", "callId": callId}
+        self.videosdk.command(command)
+
+    def restoreWindow(self):
+        command = {"method": "restoreWindow"}
+        self.videosdk.command(command)
+
+    def saveData(self, containerName: str, data: str, flags: str):
+        command = {"method": "saveData", "containerName": containerName, "data": data, "flags": flags}
+        self.videosdk.command(command)
+
+    def sendConferenceFile(self, fileId: int):
+        '''
+        Send a file to all participants in a group conference
+
+        Parameters:
+
+            fileId: int
+                File ID
+
+        Example::
+
+            sdk.sendConferenceFile(268535454)
+        '''
+        command = {"method": "sendConferenceFile", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def sendFile(self, fileId: int, peerId: str):
+        '''
+        Send file to user
+
+        Parameters:
+
+            fileId: int
+                File ID
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.sendFile(268535454, "user1@some.server")
+        '''
+        command = {"method": "sendFile", "fileId": fileId, "peerId": peerId}
+        self.videosdk.command(command)
+
+    def sendGroupMessage(self, message: str):
+        '''
+        Send a text message to the users in the conference. Used only in group conference
+
+        Parameters:
+
+            message: str
+
+        Example::
+
+            sdk.sendGroupMessage("hello!")
+        '''
+        command = {"method": "sendGroupMessage", "message": message}
+        self.videosdk.command(command)
+
+    def sendMessage(self, peerId: str, message: str):
+        '''
+        Send a text message to the user
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            message: str
+
+        Example::
+
+            sdk.sendMessage("user1@some.server", "hello!")
+        '''
+        command = {"method": "sendMessage", "peerId": peerId, "message": message}
+        self.videosdk.command(command)
+
+    def setAppSndDev(self, name: str, description: str):
+        command = {"method": "setAppSndDev", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setAudioCapturer(self, name: str, description: str):
+        command = {"method": "setAudioCapturer", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setAudioMute(self, mute: bool):
+        '''
+        Mute/unmute sound playback
+
+        Parameters:
+
+            mute: bool
+
+        Example::
+
+            sdk.setAudioMute(true)
+        '''
+        command = {"method": "setAudioMute", "mute": mute}
+        self.videosdk.command(command)
+
+    def setAudioReceivingLevel(self, peerId: str, level: int):
+        command = {"method": "setAudioReceivingLevel", "peerId": peerId, "level": level}
+        self.videosdk.command(command)
+
+    def setAudioRenderer(self, name: str, description: str):
+        '''
+        Set audio playback device
+
+        Parameters:
+
+            name: str
+                Sound playback device name
+            description: str
+                ID of the audio playback device. If the 'name' field is equal to 'none', this field must also be equal to 'none'
+
+        Example::
+
+            sdk.setAudioRenderer('none', 'none')
+        '''
+        command = {"method": "setAudioRenderer", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setBackground(self, fileId: int):
+        '''
+        Set background
+
+        Parameters:
+
+            fileId: int
+                File ID
+
+        Example::
+
+            sdk.setBackground(268535454)
+        '''
+        command = {"method": "setBackground", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def setBroadcastSelfie(self, enabled: bool, fps: int = 0):
+        '''
+        Enables/disables uploading frames from own camera to http server. When enabled, also sets the number of frames per second to be uploaded.
+
+        Parameters:
+
+            enabled: bool
+            fps: int
+                A field that is present only when frame upload should be enabled and indicates the refresh rate of frames on the http server
+
+        Example::
+
+            sdk.setBroadcastSelfie(true, 3)
+        '''
+        if enabled == True:
+            command = {"method": "setBroadcastSelfie", "enabled": enabled, "fps": fps}
+        else:
+            command = {"method": "setBroadcastSelfie", "enabled": enabled}
+        self.videosdk.command(command)
+
+    def setCrop(self, enable: bool):
+        command = {"method": "setCrop", "enable": enable}
+        self.videosdk.command(command)
+
+    def setDefaultBackground(self):
+        '''
+        Set default background
+        '''
+        command = {"method": "setDefaultBackground"}
+        self.videosdk.command(command)
+
+    def setDefaultLogo(self):
+        '''
+        Set default logo
+        '''
+        command = {"method": "setDefaultLogo"}
+        self.videosdk.command(command)
+
+    def setHttpServerSettings(self, settings: dict):
+        command = {"method": "setHttpServerSettings", "settings": settings}
+        self.videosdk.command(command)
+
+    def setLastCallsViewed(self):
+        command = {"method": "setLastCallsViewed"}
+        self.videosdk.command(command)
