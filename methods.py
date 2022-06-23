@@ -1198,3 +1198,515 @@ class Methods:
     def removeImageFromCachingQueue(self, fileId: int):
         command = {"method": "removeImageFromCachingQueue", "fileId": fileId}
         self.videosdk.command(command)
+
+    def removeSlide(self, idx: int, removeFromServer: bool):
+        command = {"method": "removeSlide", "idx": idx, "removeFromServer": removeFromServer}
+        self.videosdk.command(command)
+
+    def removeVideoSlotFromMonitor(self, monitorIndex: int):
+        command = {"method": "removeVideoSlotFromMonitor", "monitorIndex": monitorIndex}
+        self.videosdk.command(command)
+
+    def renameGroup(self, groupId: int, newName: str):
+        '''
+        Rename group
+
+        Parameters:
+
+            groupId: int
+                Group ID
+            newName: str
+                New group name
+
+        Example::
+
+            sdk.renameGroup(268535454, "NewGroupName")
+        '''
+        command = {"method": "renameGroup", "groupId": groupId, "newName": newName}
+        self.videosdk.command(command)
+
+    def renameInAbook(self, peerId: str, peerDn: str):
+        '''
+        Rename user in address book
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            peerDn: str
+                New user display name
+
+        Example::
+
+            sdk.renameInAbook("user1@some.server", "NewUserName")
+        '''
+        command = {"method": "renameInAbook", "peerId": peerId, "peerDn": peerDn}
+        self.videosdk.command(command)
+
+    def requestParticipantCameraControl(self, callId: str):
+        command = {"method": "requestParticipantCameraControl", "callId": callId}
+        self.videosdk.command(command)
+
+    def restoreWindow(self):
+        command = {"method": "restoreWindow"}
+        self.videosdk.command(command)
+
+    def saveData(self, containerName: str, data: str, flags: str):
+        command = {"method": "saveData", "containerName": containerName, "data": data, "flags": flags}
+        self.videosdk.command(command)
+
+    def sendConferenceFile(self, fileId: int):
+        '''
+        Send a file to all participants in a group conference
+
+        Parameters:
+
+            fileId: int
+                File ID
+
+        Example::
+
+            sdk.sendConferenceFile(268535454)
+        '''
+        command = {"method": "sendConferenceFile", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def sendFile(self, fileId: int, peerId: str):
+        '''
+        Send file to user
+
+        Parameters:
+
+            fileId: int
+                File ID
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.sendFile(268535454, "user1@some.server")
+        '''
+        command = {"method": "sendFile", "fileId": fileId, "peerId": peerId}
+        self.videosdk.command(command)
+
+    def sendGroupMessage(self, message: str):
+        '''
+        Send a text message to the users in the conference. Used only in group conference
+
+        Parameters:
+
+            message: str
+
+        Example::
+
+            sdk.sendGroupMessage("hello!")
+        '''
+        command = {"method": "sendGroupMessage", "message": message}
+        self.videosdk.command(command)
+
+    def sendMessage(self, peerId: str, message: str):
+        '''
+        Send a text message to the user
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            message: str
+
+        Example::
+
+            sdk.sendMessage("user1@some.server", "hello!")
+        '''
+        command = {"method": "sendMessage", "peerId": peerId, "message": message}
+        self.videosdk.command(command)
+
+    def setAppSndDev(self, name: str, description: str):
+        command = {"method": "setAppSndDev", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setAudioCapturer(self, name: str, description: str):
+        command = {"method": "setAudioCapturer", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setAudioMute(self, mute: bool):
+        '''
+        Mute/unmute sound playback
+
+        Parameters:
+
+            mute: bool
+
+        Example::
+
+            sdk.setAudioMute(true)
+        '''
+        command = {"method": "setAudioMute", "mute": mute}
+        self.videosdk.command(command)
+
+    def setAudioReceivingLevel(self, peerId: str, level: int):
+        command = {"method": "setAudioReceivingLevel", "peerId": peerId, "level": level}
+        self.videosdk.command(command)
+
+    def setAudioRenderer(self, name: str, description: str):
+        '''
+        Set audio playback device
+
+        Parameters:
+
+            name: str
+                Sound playback device name
+            description: str
+                ID of the audio playback device. If the 'name' field is equal to 'none', this field must also be equal to 'none'
+
+        Example::
+
+            sdk.setAudioRenderer('none', 'none')
+        '''
+        command = {"method": "setAudioRenderer", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setBackground(self, fileId: int):
+        '''
+        Set background
+
+        Parameters:
+
+            fileId: int
+                File ID
+
+        Example::
+
+            sdk.setBackground(268535454)
+        '''
+        command = {"method": "setBackground", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def setBroadcastSelfie(self, enabled: bool, fps: int = 0):
+        '''
+        Enables/disables uploading frames from own camera to http server. When enabled, also sets the number of frames per second to be uploaded.
+
+        Parameters:
+
+            enabled: bool
+            fps: int
+                A field that is present only when frame upload should be enabled and indicates the refresh rate of frames on the http server
+
+        Example::
+
+            sdk.setBroadcastSelfie(true, 3)
+        '''
+        if enabled == True:
+            command = {"method": "setBroadcastSelfie", "enabled": enabled, "fps": fps}
+        else:
+            command = {"method": "setBroadcastSelfie", "enabled": enabled}
+        self.videosdk.command(command)
+
+    def setCrop(self, enable: bool):
+        command = {"method": "setCrop", "enable": enable}
+        self.videosdk.command(command)
+
+    def setDefaultBackground(self):
+        '''
+        Set default background
+        '''
+        command = {"method": "setDefaultBackground"}
+        self.videosdk.command(command)
+
+    def setDefaultLogo(self):
+        '''
+        Set default logo
+        '''
+        command = {"method": "setDefaultLogo"}
+        self.videosdk.command(command)
+
+    def setHttpServerSettings(self, settings: dict):
+        command = {"method": "setHttpServerSettings", "settings": settings}
+        self.videosdk.command(command)
+
+    def setLastCallsViewed(self):
+        command = {"method": "setLastCallsViewed"}
+        self.videosdk.command(command)
+
+    def setLogo(self, fileId: int, mode: int):
+        '''
+        Set terminal logo
+
+        Parameters:
+
+            fileId: int
+                File ID
+            mode: int
+
+        Example::
+
+            sdk.setLogo(268535454, 0)
+        '''
+        command = {"method": "setLogo", "fileId": fileId, "mode": mode}
+        self.videosdk.command(command)
+
+    def setMicMute(self, mute: bool):
+        '''
+        Mute/unmute the microphone
+
+        Parameters:
+
+            mute: bool
+
+        Example::
+
+            sdk.setMicMute(true)
+        '''
+        command = {"method": "setMicMute", "mute": mute}
+        self.videosdk.command(command)
+
+    def setModeratorRole(self, peerId: str, moderator: bool):
+        '''
+        Set a conference participant as a moderator or remove such rights from him
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            moderator: bool
+
+        Example::
+
+            sdk.setModeratorRole("user1@some.server")
+        '''
+        command = {"method": "setModeratorRole", "peerId": peerId, "moderator": moderator}
+        self.videosdk.command(command)
+
+    def setModes(self, pin: str, mode: str):
+        command = {"method": "setModes", "pin": pin, "mode": mode}
+        self.videosdk.command(command)
+
+    def setNDIState(self, enabled: bool):
+        command = {"method": "setNDIState", "enabled": enabled}
+        self.videosdk.command(command)
+
+    def setOutputSelfVideoRotateAngle(self, rotateAngle: int):
+        command = {"method": "setOutputSelfVideoRotateAngle", "rotateAngle": rotateAngle}
+        self.videosdk.command(command)
+
+    def setPanPos(self):
+        command = {"method": "setPanPos"}
+        self.videosdk.command(command)
+
+    def setPtzDefaults(self):
+        command = {"method": "setPtzDefaults"}
+        self.videosdk.command(command)
+
+    def setSettings(self, settings: dict):
+        '''
+        Set application settings
+
+        Parameters:
+
+            settings: dict
+
+        Example::
+
+            sdk.setSettings({"settings": {"audioPlayLevel" : 0.55, "enableAutologin" : true}})
+        '''
+        command = {"method": "setSettings", "settings": settings}
+        self.videosdk.command(command)
+
+    def setSlidePosition(self, fromIdx: int, toIdx: int):
+        '''
+        Move the slide to the specified position
+
+        Parameters:
+
+            fromIdx: int
+                Index of the slide to be moved
+            toIdx: int
+                Index in the list to move to
+
+        Example::
+
+            sdk.setSlidePosition(0, 3)
+        '''
+        command = {"method": "setSlidePosition", "fromIdx": fromIdx, "toIdx": toIdx}
+        self.videosdk.command(command)
+
+    def setTiltPos(self, pos: int):
+        '''
+        Set current ptz camera tilt value
+
+        Parameters:
+
+            pos: int
+
+        Example::
+
+            sdk.setTiltPos(10)
+        '''
+        command = {"method": "setTiltPos", "pos": pos}
+        self.videosdk.command(command)
+
+    def setUsedApiVersion(self, version: str):
+        command = {"method": "setUsedApiVersion", "version": version}
+        self.videosdk.command(command)
+
+    def setVideoCapturer(self, name: str, description: str):
+        '''
+        Set video capture device
+
+        Parameters:
+
+            name: str
+                Video capture device name
+            description: str
+                ID of the video capture device. If the 'name' field is equal to 'none', this field must also be equal to 'none'
+
+        Example::
+
+            sdk.setVideoCapturer("none", "none")
+        '''
+        command = {"method": "setVideoCapturer", "name": name, "description": description}
+        self.videosdk.command(command)
+
+    def setVideoMute(self, mute: bool):
+        '''
+        Disable or enable video capture device
+
+        Parameters:
+
+            mute: bool
+
+        Example::
+
+            sdk.setVideoMute(true)
+        '''
+        command = {"method": "setVideoMute", "mute": mute}
+        self.videosdk.command(command)
+
+    def setZoomPos(self, pos: int):
+        '''
+        set current ptz camera zoom value
+
+        Parameters:
+
+            pos: int
+
+        Example::
+
+            sdk.setZoomPos(10)
+        '''
+        command = {"method": "setZoomPos", "pos": pos}
+        self.videosdk.command(command)
+
+    def showFirstSlide(self):
+        '''
+        Show the first slide in the list
+        '''
+        command = {"method": "showFirstSlide"}
+        self.videosdk.command(command)
+
+    def showLastSlide(self):
+        '''
+        Show the last slide in the list
+        '''
+        command = {"method": "showLastSlide"}
+        self.videosdk.command(command)
+
+    def showNextSlide(self):
+        '''
+        Show next slide
+        '''
+        command = {"method": "showNextSlide"}
+        self.videosdk.command(command)
+
+    def showPrevSlide(self):
+        '''
+        Show the previous slide in the list
+        '''
+        command = {"method": "showPrevSlide"}
+        self.videosdk.command(command)
+
+    def showSlide(self, idx: int):
+        '''
+        Show the slide at the position in the slide list
+
+        Parameters:
+            idx: int
+
+        Example::
+
+            sdk.showSlide(3)
+        '''
+        command = {"method": "showSlide", "idx": idx}
+        self.videosdk.command(command)
+
+    def showVideoSlot(self, callId: str):
+        command = {"method": "showVideoSlot", "callId": callId}
+        self.videosdk.command(command)
+
+    def shutdown(self, forAll: bool):
+        '''
+        Turn off the terminal
+
+        Parameters:
+
+            forAll: bool
+
+        Example::
+
+            sdk.shutdown(true)
+        '''
+        command = {"method": "shutdown", "forAll": forAll}
+        self.videosdk.command(command)
+
+    def shutdownSystem(self, forAll: bool):
+        '''
+        Turn off computer
+
+        Parameters:
+
+            forAll: bool
+
+        Example::
+
+            sdk.shutdownSystem(true)
+        '''
+        command = {"method": "shutdownSystem", "forAll": forAll}
+        self.videosdk.command(command)
+
+    def sortSlides(self):
+        '''
+        Sort slide list by filename
+        '''
+        command = {"method": "sortSlides"}
+        self.videosdk.command(command)
+
+    def startAudioDelayDetectorTest(self):
+        command = {"method": "startAudioDelayDetectorTest"}
+        self.videosdk.command(command)
+
+    def startBroadcastPicture(self, fileId: int):
+        '''
+        Enable broadcasting of a file (image, .gif file, etc.) instead of your own video
+
+        Parameters:
+
+            fileId: int
+                File ID
+
+        Example::
+
+            sdk.startBroadcastPicture(268535454)
+        '''
+        command = {"method": "startBroadcastPicture", "fileId": fileId}
+        self.videosdk.command(command)
+
+    def startCapture(self, captureId: int):
+        command = {"method": "startCapture", "captureId": captureId}
+        self.videosdk.command(command)
+
+    def startHttpServer(self):
+        '''
+        Start http server
+        '''
+        command = {"method": "startHttpServer"}
+        self.videosdk.command(command)
