@@ -1710,3 +1710,197 @@ class Methods:
         '''
         command = {"method": "startHttpServer"}
         self.videosdk.command(command)
+
+    def startRemark(self):
+        command = {"method": "startRemark"}
+        self.videosdk.command(command)
+
+    def startSlideShow(self, title: str = "", startingIdx: int = 0):
+        '''
+        Start slideshow
+
+        Parameters:
+
+            title: str
+                Slideshow title. Optional parameter
+            startingIdx: int
+                Number of the initial slide. If there is no parameter, the slideshow starts from the first slide
+
+        Example::
+
+            sdk.startSlideShow("Some slideshow", 2)
+        '''
+        command = {"method": "startSlideShow", "title": title, "startingIdx": startingIdx}
+        self.videosdk.command(command)
+
+    def stopAudioDelayDetectorTest(self):
+        command = {"method": "stopAudioDelayDetectorTest"}
+        self.videosdk.command(command)
+
+    def stopBroadcastPicture(self):
+        '''
+        Stops broadcasting a picture instead of its own video
+        '''
+        command = {"method": "stopBroadcastPicture"}
+        self.videosdk.command(command)
+
+    def stopCachingAllImages(self):
+        '''
+        Stop caching slideshow slides
+        '''
+        command = {"method": "stopCachingAllImages"}
+        self.videosdk.command(command)
+
+    def stopCapture(self):
+        '''
+        Stop content showing
+        '''
+        command = {"method": "stopCapture"}
+        self.videosdk.command(command)
+
+    def stopHttpServer(self):
+        '''
+        Stop http server
+        '''
+        command = {"method": "stopHttpServer"}
+        self.videosdk.command(command)
+
+    def stopSlideShow(self):
+        '''
+        Stop slideshow
+        '''
+        command = {"method": "stopSlideShow"}
+        self.videosdk.command(command)
+
+    def swapVideoSlots(self, callId1: str, callId2: str):
+        '''
+        Swap video slots in layout
+
+        Parameters:
+
+            callId1: str
+                First video slot ID in layout that should be changed
+                User ID (TrueConf ID)
+            callId2: str
+                Second video slot ID in layout that should be changed
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.swapVideoSlots("user1@some.server", "user2@some.server")
+        '''
+        command = {"method": "swapVideoSlots", "callId1": callId1, "callId2": callId2}
+        self.videosdk.command(command)
+
+    def switchVideoFlow(self, callId: str, mainCamera: bool):
+        command = {"method": "switchVideoFlow", "callId": callId, "mainCamera": mainCamera}
+        self.videosdk.command(command)
+
+    def testAudioCapturerStart(self):
+        '''
+        Start testing the audio capture device. Launching is possible only not in a conference
+        '''
+        command = {"method": "testAudioCapturerStart"}
+        self.videosdk.command(command)
+
+    def testAudioCapturerStop(self):
+        '''
+        Stop testing the audio capture device
+        '''
+        command = {"method": "testAudioCapturerStop"}
+        self.videosdk.command(command)
+
+    def testAudioRenderer(self):
+        '''
+        Starts playback device test (single track). Launching is possible only not in a conference
+        '''
+        command = {"method": "testAudioRenderer"}
+        self.videosdk.command(command)
+
+    def toneDial(self, symbol: str, callId: str):
+        '''
+        Tone dialing
+
+        Parameters:
+
+            symbol: str
+                Dialing symbol
+            callId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.toneDial('1', "user1@some.server")
+        '''
+        command = {"method": "toneDial", "symbol": symbol, "callId": callId}
+        self.videosdk.command(command)
+
+    def turnRemoteCamera(self, peerId: str, on: bool):
+        '''
+        Turn off or turn on the video capture device of a group conference participant.
+        The command can only be executed by the owner, operator, or moderator of the current group conference
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            on: bool
+
+        Example::
+
+            sdk.turnRemoteCamera("user1@some.server", true)
+        '''
+        command = {"method": "turnRemoteCamera", "peerId": peerId, "on": on}
+        self.videosdk.command(command)
+
+    def turnRemoteMic(self, peerId: str, on: bool):
+        '''
+        Turn off or turn on the audio capture device of a group conference participant.
+        The command can only be executed by the owner, operator, or moderator of the current group conference
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            on: bool
+
+        Example::
+
+            sdk.turnRemoteMic("user1@some.server", true)
+        '''
+        command = {"method": "turnRemoteMic", "peerId": peerId, "on": on}
+        self.videosdk.command(command)
+
+    def turnRemoteSpeaker(self, peerId: str, on: bool):
+        '''
+        Turn off or turn on the audio playback device of a group conference participant.
+        The command can only be executed by the owner, operator, or moderator of the current group conference
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+            on: bool
+
+        Example::
+
+            sdk.turnRemoteSpeaker("user1@some.server", true)
+        '''
+        command = {"method": "turnRemoteSpeaker", "peerId": peerId, "on": on}
+        self.videosdk.command(command)
+
+    def unblock(self, peerId: str):
+        '''
+        Remove user from blocked users list
+
+        Parameters:
+
+            peerId: str
+                User ID (TrueConf ID)
+
+        Example::
+
+            sdk.unblock("user1@some.server")
+        '''
+        command = {"method": "unblock", "peerId": peerId}
+        self.videosdk.command(command)
