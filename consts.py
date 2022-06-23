@@ -688,6 +688,7 @@ METHOD_RESPONSE = {
     M_setAudioMute: {"method": "setAudioMute", "result": None},
     M_setAudioReceivingLevel: {"method": "setAudioReceivingLevel", "result": None},
     M_setAudioRenderer: {"method": "setAudioRenderer", "result": None},
+    M_setAuthParams: {"method": "setAuthParams", "result": None},
     M_setBackground: {"method": "setBackground", "result": None},
     M_setBroadcastSelfie: {"method": "setBroadcastSelfie", "result": None},
     M_setCrop: {"method": "setCrop", "result": None},

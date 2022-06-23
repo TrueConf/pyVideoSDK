@@ -1366,6 +1366,37 @@ class Methods:
         command = {"method": "setAudioRenderer", "name": name, "description": description}
         self.videosdk.command(command)
 
+    def setAuthParams(self, userType: str, authType: str, secret: str = None):
+        '''
+        Set a new security type to manage terminal 'user' or 'admin'.
+
+        Parameters:
+            userType: str
+            authType: str
+            secret: str = None
+
+        Example::
+
+            sdk.setAuthParams("admin", "password", "somePassword")
+        '''
+        # userType:
+        #   admin
+        #   user
+
+        # authType:
+        #   password
+        #   pin
+        #   unsecured
+
+        if authType == "password":
+            command = {"method": "setAuthParams", "userType": userType, "authType": authType, "password": secret}
+        elif authType == "pin":
+            command = {"method": "setAuthParams", "userType": userType, "authType": authType, "newPin": secret}
+        else:
+            command = {"method": "setAuthParams", "userType": userType, "authType": authType}
+        self.videosdk.command(command)
+        self.videosdk.command(command)
+
     def setBackground(self, fileId: int):
         '''
         Set background
