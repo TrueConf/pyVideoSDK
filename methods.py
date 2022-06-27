@@ -1395,7 +1395,6 @@ class Methods:
         else:
             command = {"method": "setAuthParams", "userType": userType, "authType": authType}
         self.videosdk.command(command)
-        self.videosdk.command(command)
 
     def setBackground(self, fileId: int):
         '''
