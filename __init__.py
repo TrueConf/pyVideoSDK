@@ -127,8 +127,8 @@ class VideoSDK:
     def __del__(self):
         pass
 
-    def __add_handler__(self, handle: dict, func):
-        self.api_handlers.append([handle, func])
+    def __add_handler__(self, handle: dict, function: object):
+        self.api_handlers.append([handle, function])
 
     # Send directly to websocket
     def __send_to_websocket(self, command: dict):
@@ -161,6 +161,7 @@ class VideoSDK:
         for item in self.api_handlers:
             if check_schema(item[0], response):
                 func_handler = item[1]
+                # Call the Handler function
                 func_handler(response)
 
     # 1) Event: appStateChanged
@@ -332,8 +333,38 @@ class VideoSDK:
             self.__add_handler__(filter, f)
             return f
 
-        return decorator            
+        return decorator
+
+    def add_handler(self, filter: dict, method: object):
+        """
+        Register a class member method as an event handler
+
+        Parameters:
+
+            filter: dict
+                Filter
+
+            method: object
+                Class member function
+        """
+        self.__add_handler__(filter, method)
     
+    def del_handler(self, method: object):
+        """
+        Unregister handler
+
+        Parameters:
+
+            method: object
+                The previous registered class member function
+        """
+        i = 0
+        while i < len(self.api_handlers):
+            if self.api_handlers[i][1] == method:
+                self.api_handlers.pop(i)
+            else:
+                i += 1
+
     # Add new command to queue
     def command(self, command: dict):
         """
