@@ -1432,8 +1432,8 @@ class Methods:
             command = {"method": "setBroadcastSelfie", "enabled": enabled}
         self.videosdk.command(command)
 
-    def setCrop(self, enable: bool):
-        command = {"method": "setCrop", "enable": enable}
+    def setCrop(self, enabled: bool):
+        command = {"method": "setCrop", "enabled": enabled}
         self.videosdk.command(command)
 
     def setDefaultBackground(self):

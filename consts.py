@@ -850,7 +850,7 @@ METHOD_RESPONSE = {
     M_getConnected: {"method": "getConnected", "state": None, "serverInfo": None, "result": None},
     M_getContactDetails: {"method": "getContactDetails", "result": None},
     M_getCreatedNDIDevices: {"method": "getCreatedNDIDevices", "createdNDIDevices": None, "result": None},
-    M_getCrop: {"method": "getCrop", "enable": None, "result": None},
+    M_getCrop: {"method": "getCrop", "enabled": None, "result": None},
     M_getCurrentUserProfileUrl: {"method": "getCurrentUserProfileUrl", "url": None, "result": None},
     M_getDisplayNameById: {"method": "getDisplayNameById", "peerDn": None, "peerId": None, "result": None},
     M_getFileInfo: {
