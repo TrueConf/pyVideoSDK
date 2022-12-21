@@ -33,4 +33,3 @@ pip install -r requirements.txt
 
 * [Python code example](https://github.com/TrueConf/pyVideoSDK-Demo)
 * [Python call button example](https://github.com/TrueConf/CallButton)
-* [C++ code example](https://github.com/TrueConf/DemoQtVideoSDK)
