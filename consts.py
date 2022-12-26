@@ -184,7 +184,7 @@ EV_windowStateChanged = "windowStateChanged"
 EVENT = {
     EV_ALL: {},
     EV_appStateChanged: {"event": "appStateChanged", "appState": None},
-    EV_incomingChatMessage: {"event": "incomingChatMessage", "peerId": None, "peerDn": None, "message": None, "time": None, "method": "event"},
+    EV_incomingChatMessage: {"event": "incomingChatMessage", "peerId": None, "chatId": None, "message": None, "time": None, "method": "event"},
     EV_inviteReceived: {"event": "inviteReceived", "peerId": None, "peerDn": None, "type": None, "confId": None, "method": "event"},
     EV_rejectReceived: {"event": "rejectReceived", "cause": None, "peerId": None, "peerDn": None, "method": "event"},
     EV_myEvent: {"event": "myEvent", "data": None, "method": "event"},
