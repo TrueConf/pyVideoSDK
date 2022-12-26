@@ -1,15 +1,22 @@
 # pyVideoSDK
+
 A Python library for the TrueConf VideoSDK API &amp; TrueConf Room API 
 
 ## How to use
 
-### Download and install TrueConf Room
+### Download and install TrueConf VideoSDK or TrueConf Room
 
-   1. [Download TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
+   1. [Download TrueConf VideoSDK or TrueConf Room](https://github.com/TrueConf/pyVideoSDK/blob/main/download.md)
    1. Install with default settigs (Port = 80)
-   1. Launch application c **-pin** parameter in the command line. Example:
+   1. Launch application c **-pin** parameter in the command line.
+   
+   Windows:
    ```
-   "C:\Program Files\TrueConf\Room\TrueConfRoom.exe" -pin "pin123"
+   "C:\Program Files\TrueConf\VideoSDK\VideoSDK.exe" -pin "pin123"
+   ```
+   Linux:
+   ```
+   $ trueconf-video-sdk -pin "pin123"
    ```
 
 ### Login
@@ -27,3 +34,8 @@ A Python library for the TrueConf VideoSDK API &amp; TrueConf Room API
 ```
 pip install -r requirements.txt
 ```
+
+## Demo projects using VideoSDK
+
+* [Python code example](https://github.com/TrueConf/pyVideoSDK-Demo)
+* [Python call button example](https://github.com/TrueConf/CallButton)
