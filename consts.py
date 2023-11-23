@@ -214,7 +214,6 @@ EVENT = {
         "conferenceOwner": None,
         "joinUrl": None,
         "realTimeConferenceManagmentUrl": None,
-        "peerId": None,
         "method": "event"
     },
     EV_conferenceDeleted: {"event": "conferenceDeleted", "confId": None, "method": "event"},
@@ -417,17 +416,6 @@ EVENT = {
         "event": "newParticipantInConference",
         "peerId": None,
         "peerDn": None,
-        "recordingMe": None,
-        "recordingByMe": None,
-        "mic": None,
-        "video": None,
-        "slideShow": None,
-        "role": None,
-        "broadcast": None,
-        "audioReceiving": None,
-        "videoReceiving": None,
-        "extraVideo": None,
-        "leaderType": None,
         "confId": None,
         "method": "event"
     },
@@ -781,6 +769,8 @@ M_turnRemoteCamera = "turnRemoteCamera"
 M_turnRemoteMic = "turnRemoteMic"
 M_turnRemoteSpeaker = "turnRemoteSpeaker"
 M_unblock = "unblock"
+# version 4.2
+M_searchContact = "searchContact"
 
 METHOD_RESPONSE = {
     M_getHardware: {
@@ -1110,4 +1100,12 @@ METHOD_RESPONSE = {
     M_turnRemoteMic: {"method": "turnRemoteMic", "result": None},
     M_turnRemoteSpeaker: {"method": "turnRemoteSpeaker", "result": None},
     M_unblock: {"method": "unblock", "peerId": None, "result": None},
+    # version 4.2
+    M_searchContact: {
+        "method": "searchContact",
+        "searchingResult": None,
+        "foundContacts": None,
+        "result": None
+}
+
 }

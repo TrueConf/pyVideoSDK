@@ -424,7 +424,7 @@ class VideoSDK:
         self.auth_token = ""
 
         self.wsPort = utils.getWebsocketPort(ip, port, logger)
-        self.httpPort = utils.getHttpPort(ip, port, logger)
+        self.http_port = utils.getHttpPort(ip, port, logger)
         
         websocket.enableTrace(self.debug)
         self.url = f'ws://{self.ip}:{self.wsPort}'
@@ -472,6 +472,9 @@ class VideoSDK:
 
     def isConnected(self) -> bool:
         return self.session_status in [SessionStatus.connected, SessionStatus.normal]
+    
+    def getSelfViewURL(self) -> str:
+        return f'http://{self.ip}:{self.http_port}/frames/?peerId=%23self%3A0&token={self.auth_token}'
 
 # ========================================================================================
 def open_session(ip: str, port: int = 80, pin: str = None, debug: bool = False): 
