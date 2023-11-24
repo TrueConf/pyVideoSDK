@@ -435,6 +435,9 @@ class VideoSDK:
                                                  on_close=self.__WS_close)
         #self.connection.on_open = self.on_open
         self.__set_session_status(SessionStatus.started)
+
+        self.methods = methods.Methods(self)
+
         thread.start_new_thread(self.__run_socket, ())
 
     def close_session(self):
