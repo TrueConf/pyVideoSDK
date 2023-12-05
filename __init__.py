@@ -15,7 +15,7 @@ from threading import Lock, Thread
 from logging.handlers import RotatingFileHandler
 from logging import Formatter
 from enum import Enum, IntEnum
-import pyVideoSDK.utils
+import pyVideoSDK.utils, pyVideoSDK.methods
 
 __status__  = "Development"
 __authors__ = ["Andrey Zobov", "Pavel Titov"]
@@ -33,21 +33,21 @@ PRODUCT_NAME = 'TrueConf VideoSDK'
 DEFAULT_ROOM_PORT = 80
 QUEUE_INTERVAL = 0.05
 
-logger = logging.getLogger('tcroom')
+logger = logging.getLogger('videosdk')
 logger.setLevel(logging.DEBUG)
 
 rotation_handler = logging.handlers.RotatingFileHandler(
-    filename='tcroom.log',
+    filename='videosdk.log',
     maxBytes=1024 ** 2 * 10,  # 10 MB
     backupCount=3
 )
-rotation_handler.setFormatter(Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+rotation_handler.setFormatter(Formatter("%(asctime)-15s [%(levelname)s] %(funcName)s: %(message)s"))
 
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+#console_handler = logging.StreamHandler()
+#console_handler.setFormatter(Formatter("%(asctime)-15s [%(levelname)s] %(funcName)s: %(message)s"))
 
 logger.addHandler(rotation_handler)
-logger.addHandler(console_handler)
+#logger.addHandler(console_handler)
 
 
 class SessionStatus(IntEnum):
@@ -261,7 +261,8 @@ class VideoSDK:
 
     def __set_session_status(self, status):
         self.session_status = status
-        logger.info(f'Session status: {self.session_status.name}')
+        if self.debug:
+            logger.info(f'Session status: {self.session_status.name}')
 
     def __auth(self, pin: str):
         if pin:
@@ -511,7 +512,8 @@ def open_session(ip: str, port: int = 80, pin: str = None, debug: bool = False):
             break
         time.sleep(0.1)
         if i >= round(WAIT_FOR_SEC / SLEEP) - 1:
-            logger.error('Connection timed out')
+            if room.debug:
+                logger.error('Connection timed out')
             room.caughtConnectionError('Connection timed out')
 
     return room

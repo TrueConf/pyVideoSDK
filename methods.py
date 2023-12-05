@@ -1,7 +1,7 @@
-﻿from pyVideoSDK import VideoSDK
+﻿# from pyVideoSDK import VideoSDK
 
 class Methods:
-    def __init__(self, videosdk: VideoSDK):
+    def __init__(self, videosdk):
         self.videosdk = videosdk
 
     def __del__(self):
