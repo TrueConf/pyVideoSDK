@@ -47,12 +47,12 @@ class Methods:
         command = {"method": "hangUp", "forAll": forAll}
         self.videosdk.command(command)
 
-    def login(self, callId: str, password: str):
+    def login(self, callId: str, password: str, encryptPassword: bool = True):
         """Login to TrueConf Server"""
         command = {"method" : "login",
             "login" : callId,
             "password" : password,
-            "encryptPassword" : True}
+            "encryptPassword" : encryptPassword}
         self.videosdk.command(command)
 
     def logout(self):
